@@ -1,9 +1,7 @@
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 from scipy.stats import shapiro, levene, mannwhitneyu
-from final import calculate_asymmetry_ratio, load_image_paths_and_labels
+from CNN_train import calculate_asymmetry_ratio, load_image_paths_and_labels
 
 # 이미지 폴더 경로
 normal_images_path = 'data/normal_pictures'
