@@ -1,0 +1,101 @@
+/* setting.css*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #e8f5e9; 
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #2e7d32; /* 중간 초록색 텍스트 */
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #558b2f; 
+}
+
+main {
+    width: 100%;
+    max-width: 500px; /* 넓이 증가로 더 나은 레이아웃 */
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #33691e; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #33691e; /* 진한 초록색 텍스트 */
+}
+
+input[type="number"],
+select {
+    padding: 0.7rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #aed581; 
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+input[type="number"] {
+    width: calc(100% - 1.4rem); /* 패딩을 맞추기 위한 넓이 조정 */
+}
+
+button[type="submit"],
+input[type="submit"] {
+    padding: 0.7rem;
+    background-color: #66bb6a; 
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+    background-color: #388e3c; /
+}
+
+footer {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+
+footer > a {
+    text-decoration: none;
+    color: #388e3c; 
+}

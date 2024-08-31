@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #e8f5e9; /* 연한 초록색 배경 */
+    color: #2e7d32; /* 차분한 초록색 텍스트 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #1b5e20; /* 진한 초록색 헤더 텍스트 */
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #388e3c; /* 중간 초록색 서브헤더 텍스트 */
+}
+
+main {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: #ffffff; /* 흰색 배경 */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#form-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #2e7d32; /* 차분한 초록색 텍스트 */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #2e7d32; /* 차분한 초록색 텍스트 */
+}
+
+input[type="number"],
+select {
+    padding: 0.7rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #a5d6a7; /* 연한 초록색 테두리 */
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #2c3e50; /* 진한 초록색 텍스트 */
+}
+
+button[type="submit"] {
+    padding: 0.7rem;
+    background-color: #66bb6a; /* 중간 초록색 버튼 */
+    color: #ffffff; /* 흰색 텍스트 */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #43a047; /* 어두운 초록색 버튼 호버 */
+}
+
+footer {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #2e7d32; /* 차분한 초록색 텍스트 */
+}
+
+footer > a {
+    text-decoration: none;
+    color: #388e3c; /* 중간 초록색 링크 */
+}

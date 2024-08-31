@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #e8f5e9; 
+    color: #2e7d32; 
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 1.2rem 0;
+}
+
+header > p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1b5e20; 
+}
+
+header > ul {
+    display: flex;
+}
+
+header > ul > li {
+    list-style-type: none;
+    margin-left: 1.5rem;
+    position: relative;
+}
+
+header > ul > li > a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #1b5e20; 
+}
+
+header > ul > li:first-child > a {
+    border-bottom: 5px solid #1b5e20; 
+}
+
+header > ul > li > a:hover {
+    border-bottom: 5px solid #004d40; 
+}
+
+header > ul > li.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff; 
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+header > ul > li.dropdown .dropdown-content a {
+    color: #2e7d32; 
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+}
+
+header > ul > li.dropdown .dropdown-content a:hover {
+    background-color: #a5d6a7; 
+}
+
+header > ul > li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+section {
+    padding: 0 3rem;
+    text-align: center;
+}
+
+section > p {
+    margin-bottom: 1rem;
+}
+
+section > p:first-child {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #1b5e20; 
+}
+
+section > p:last-of-type {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #4caf50;
+}
+
+section > a {
+    display: block;
+    border: 1px solid #004d40; 
+    width: 150px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #ffffff; 
+    color: #004d40; 
+}
+
+footer {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #1b5e20;
+}
+
+footer > a {
+    text-decoration: none;
+    color: #004d40; 
+}

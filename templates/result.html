@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결과</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+    <script src="{{ url_for('static', filename='scripts.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>결과</h1>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="flashes" style="display: none;">
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </header>
+
+    <main>
+        <section>
+            <h2>업로드된 이미지:</h2>
+            <img src="{{ url_for('uploaded_file', filename=filename) }}" alt="Uploaded Image">
+
+            <!-- 결과와 확신도 표시 -->
+            <h3>예측 결과:</h3>
+            <p><strong>{{ result }}</strong>으로 분류되었습니다.</p>
+            <p>확신도: <strong>{{ confidence }}%</strong></p>
+
+            <!-- 링크 -->
+            <a href="{{ url_for('upload') }}">다시 업로드</a>
+            <a href="{{ url_for('index') }}">홈으로 돌아가기</a>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 뇌졸증 진단 프로그램. All rights reserved. @bmsw</p>
+    </footer>
+</body>
+</html>

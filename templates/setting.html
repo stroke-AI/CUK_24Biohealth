@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 정보 입력</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='setting.css') }}">
+    <script src="{{ url_for('static', filename='setting.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>회원 정보 수정</h1>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="flashes" style="display: none;">
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </header>
+
+    <main>
+        <h2>회원 정보 입력</h2>
+        <form method="POST" action="{{ url_for('setting') }}">
+            <!-- 나이 입력 -->
+            <label for="age">나이:</label>
+            <input type="number" id="age" name="age" min="0" required>
+            <br><br>
+
+            <!-- 성별 입력 -->
+            <label for="gender">성별:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">남성</option>
+                <option value="female">여성</option>
+                <option value="other">기타</option>
+            </select>
+            <br><br>
+
+            <!-- 혈압 입력 -->
+            <label for="blood-pressure-option">혈압:</label>
+            <select id="blood-pressure-option" name="blood-pressure-option">
+                <option value="unknown">모름</option>
+                <option value="known">안다</option>
+            </select>
+            <div id="blood-pressure-input" style="display:none;">
+                <label for="systolic-bp">최고 혈압:</label>
+                <input type="number" id="systolic-bp" name="systolic-bp" min="0" max="999" placeholder="수축기 혈압">
+                <br><br>
+                <label for="diastolic-bp">최저 혈압:</label>
+                <input type="number" id="diastolic-bp" name="diastolic-bp" min="0" max="999" placeholder="이완기 혈압">
+            </div>
+            <br><br>
+
+            <!-- 콜레스테롤 수치 입력 -->
+            <label for="cholesterol-option">콜레스테롤 수치:</label>
+            <select id="cholesterol-option" name="cholesterol-option">
+                <option value="unknown">모름</option>
+                <option value="known">안다</option>
+            </select>
+            <div id="cholesterol-input" style="display:none;">
+                <input type="number" id="cholesterol" name="cholesterol" min="0" max="999" placeholder="콜레스테롤 수치 입력">
+            </div>
+            <br><br>
+
+            <!-- 흡연 여부 입력 -->
+            <label for="smoking">흡연 여부:</label>
+            <select id="smoking" name="smoking" required>
+                <option value="yes">예</option>
+                <option value="no">아니오</option>
+            </select>
+            <br><br>
+
+            <!-- 제출 버튼 -->
+            <input type="submit" value="제출">
+        </form>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 뇌졸증 진단 프로그램. All rights reserved. @bmsw</p>
+    </footer>
+</body>
+</html>
